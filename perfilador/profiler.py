@@ -8,7 +8,6 @@ class Profiler(object):
         self.exch = exch
         self.trace = trace
         
-        # Configurando a lista de acordo com os parâmetros
         if lyst is not None:
             self.lyst = lyst
         elif unique:
@@ -17,12 +16,10 @@ class Profiler(object):
         else:
             self.lyst = [random.randint(1, size) for _ in range(size)]
 
-        # Contadores Iniciais
         self.exchCount = 0
         self.cmpCount = 0
         self.startClock()
         
-        # Executando a função de ordenação
         function(self.lyst, self)
         
         self.stopClock()
