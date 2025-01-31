@@ -1,10 +1,7 @@
-"""
-File: graph.py
-Graph data structures: LinkedDirectedGraph, LinkedVertex, LinkedEdge
-"""
+
 
 class LinkedVertex:
-    """Represents a vertex in a graph."""
+
     def __init__(self, label):
         self.label = label
         self.edgeList = []
@@ -46,7 +43,7 @@ class LinkedVertex:
         return isinstance(other, LinkedVertex) and self.label == other.label
 
 class LinkedEdge:
-    """Represents an edge in a graph."""
+    
     def __init__(self, fromVertex, toVertex, weight=1):
         self.vertex1 = fromVertex
         self.vertex2 = toVertex
@@ -65,7 +62,7 @@ class LinkedEdge:
         return (self.vertex1, self.vertex2, self.weight) == (other.vertex1, other.vertex2, other.weight)
 
 class LinkedDirectedGraph:
-    """Represents a directed graph using adjacency lists."""
+    
     def __init__(self):
         self.vertices = {}
     
